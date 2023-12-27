@@ -23,21 +23,67 @@ spec:
         resources: {}
 status: {}
 ---
-apiVersion: v1
+
 kind: Service
+apiVersion: v1
 metadata:
-  creationTimestamp: null
-  labels:
-    app: webconsumer
   name: webconsumer
+  labels:
+    name: webconsumer
 spec:
   ports:
-  - name: 8080-8080
-    port: 8080
-    protocol: TCP
-    targetPort: 8080
-  selector:
+    - nodePort: 30164 
+      port: 8080      
+      targetPort: 8080  
+      protocol: TCP
+  selector:           
     app: webconsumer
-  type: ClusterIP
-status:
-  loadBalancer: {}
+  type: LoadBalancer      
+
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: webconsumer
+# spec:
+#   rules:
+#   - host: webconsumer.com
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: webconsumer
+#             port:
+#               number: 8080
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: webconsumer
+# spec:
+#   selector:
+#     app: webconsumer
+#   ports:
+#     - port: 8080
+#       targetPort: 8080
+#   type: LoadBalancer
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   creationTimestamp: null
+#   labels:
+#     app: webconsumer
+#   name: webconsumer
+# spec:
+#   ports:
+#   - name: 8080-8080
+#     port: 8080
+#     protocol: TCP
+#     targetPort: 8080
+#   selector:
+#     app: webconsumer
+#   type: ClusterIP
+# status:
+#   loadBalancer: {}
