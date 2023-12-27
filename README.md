@@ -18,7 +18,7 @@ A springboot web interface for a Java app that deliberately consumes resources
 Tag the image so it can be deployed to k8s
 
 ```bash
-docker tag webconsumer:0.0.1-SNAPSHOT simonanderson/webconsumer
+docker tag webconsumer:0.1 simonanderson/webconsumer
 docker push simonanderson/webconsumer
 ```
 

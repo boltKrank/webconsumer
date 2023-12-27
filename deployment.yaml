@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: webconsumer-node
-  name: webconsumer-node
+    app: webconsumer
+  name: webconsumer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webconsumer-node
+      app: webconsumer
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: webconsumer-node
+        app: webconsumer
     spec:
       containers:
       - image: simonanderson/webconsumer
@@ -28,8 +28,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: webconsumer-node
-  name: webconsumer-node
+    app: webconsumer
+  name: webconsumer
 spec:
   ports:
   - name: 8080-8080
@@ -37,7 +37,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: webconsumer-node
+    app: webconsumer
   type: ClusterIP
 status:
   loadBalancer: {}
