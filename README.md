@@ -2,6 +2,11 @@
 
 A springboot web interface for a Java app that deliberately consumes resources
 
+## Prerequisites
+
+- Java 17 or above
+- Gradle
+
 ## Build boot image
 
 **NOTE** Docker needs to be running for this to work
