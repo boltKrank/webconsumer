@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Web resource consumer </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Running:</h1>
+        
+    <p th:text="'Level: ' + ${consumer.level}" />
+    <p th:text="'Iterations: ' + ${consumer.iterations}" />  
+
+    <!-- while consumer.running() show "RUNNING" else show below link-->
+        
+    <a href="/">Return to begining</a>
+</body>
+</html>
