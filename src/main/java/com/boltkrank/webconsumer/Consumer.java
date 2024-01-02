@@ -65,7 +65,7 @@ public class Consumer {
             }
             numberList = insertionSort(numberList);
             
-            System.out.println("\nArray after insertion sort:");
+            System.out.println("\n\nArray after insertion sort:");
             for(int i=0; i<numberList.length;i++){
                 System.out.print(" "+numberList[i]+" ");
             }
@@ -80,7 +80,7 @@ public class Consumer {
             }
             numberList = bubbleSort(numberList);
 
-            System.out.println("\nArray after bubble sort:");
+            System.out.println("\n\nArray after bubble sort:");
             for(int i=0; i<numberList.length;i++){
                 System.out.print(" "+numberList[i]+" ");
             }
@@ -97,14 +97,14 @@ public class Consumer {
             numberList = selectionSort(numberList);
 
             
-            System.out.println("\nArray after selection sort:");
+            System.out.println("\n\nArray after selection sort:");
             for(int i=0; i<numberList.length;i++){
                 System.out.print(" "+numberList[i]+" ");
             }
 
         }
 
-        System.out.println("Iterations: " + tmp_iter + "\nLevel: " + getLevel());
+        System.out.println("\nIterations: " + tmp_iter + "\nLevel: " + getLevel());
 
         setRunning(false);
         System.out.println("Finished Running");
