@@ -43,10 +43,13 @@ public class Consumer {
 
         setRunning(true);
         System.out.println("Running");
+        System.out.println("Test getIterations(): " + getIterations());
 
-        int tmp_iter = Integer.getInteger(getIterations());
+        //int tmp_iter = Integer.getInteger(getIterations());  Integer.getInteger(getIterations()) is returning null
+        int tmp_iter = 88;
 
         //Create Array and fill will random values
+        
         int[] numberList = new int[tmp_iter];
         
         //Create random number generator.

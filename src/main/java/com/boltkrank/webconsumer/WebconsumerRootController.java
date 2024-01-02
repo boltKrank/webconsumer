@@ -19,13 +19,15 @@ public class WebconsumerRootController {
     @PostMapping("/")
 	public String consumerSubmit(@ModelAttribute Consumer consumer, Model model) {
 
+		model.addAttribute("consumer", consumer);
+
         System.out.println("Level: " + consumer.getLevel());
 
         System.out.println("Iterations: " + consumer.getIterations());
 
         consumer.runConsumption();
 
-	  model.addAttribute("consumer", consumer);
+	  
 	  return "webconsumer_output";
 	}
 
