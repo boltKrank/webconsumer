@@ -17,7 +17,7 @@ public class Consumer {
     }
 
     public void setIterations(String iterations){
-        this.iterations = iterations;
+        this.iterations = iterations; 
     }
 
     public String getLevel(){
@@ -43,10 +43,8 @@ public class Consumer {
 
         setRunning(true);
         System.out.println("Running");
-        System.out.println("Test getIterations(): " + getIterations());
 
-        //int tmp_iter = Integer.getInteger(getIterations());  Integer.getInteger(getIterations()) is returning null
-        int tmp_iter = 88;
+        int tmp_iter = Integer.parseInt(getIterations());
 
         //Create Array and fill will random values
         
