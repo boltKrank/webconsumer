@@ -61,28 +61,28 @@ public class Consumer {
 
             System.out.println("Array before insertion sort:");
             for(int i=0; i<numberList.length;i++){
-                System.out.println(" "+numberList[i]+" ");
+                System.out.print(" "+numberList[i]+" ");
             }
             numberList = insertionSort(numberList);
             
             System.out.println("Array after insertion sort:");
             for(int i=0; i<numberList.length;i++){
-                System.out.println(" "+numberList[i]+" ");
+                System.out.print(" "+numberList[i]+" ");
             }
 
         }
         else if (getLevel().equals("medium")){
 
             
-            System.out.println("Array before bubble sort:");
+            System.out.print("Array before bubble sort:");
             for(int i=0; i<numberList.length;i++){
-                System.out.println(" "+numberList[i]+" ");
+                System.out.print(" "+numberList[i]+" ");
             }
             numberList = bubbleSort(numberList);
 
             System.out.println("Array after bubble sort:");
             for(int i=0; i<numberList.length;i++){
-                System.out.println(" "+numberList[i]+" ");
+                System.out.print(" "+numberList[i]+" ");
             }
 
 
@@ -91,7 +91,7 @@ public class Consumer {
 
             System.out.println("Array before selection sort:");
             for(int i=0; i<numberList.length;i++){
-                System.out.println(" "+numberList[i]+" ");
+                System.out.print(" "+numberList[i]+" ");
             }
                         
             numberList = selectionSort(numberList);
@@ -99,7 +99,7 @@ public class Consumer {
             
             System.out.println("Array after selection sort:");
             for(int i=0; i<numberList.length;i++){
-                System.out.println(" "+numberList[i]+" ");
+                System.out.print(" "+numberList[i]+" ");
             }
 
         }
